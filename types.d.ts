@@ -1,3 +1,3 @@
-import * as Interal from "./internal";
-
-declare module "pkg_name" {}
+declare module "@uppercod/hash" {
+    export default function hash(str: string): string;
+}
