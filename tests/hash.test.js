@@ -1,5 +1,5 @@
 import test from "ava";
-import hash from "../src/hash";
+import { hash } from "../src/hash.js";
 
 test("simple hash", async (t) => {
     t.is(hash("https://github.com/UpperCod"), "9a8-a0c-9a4");

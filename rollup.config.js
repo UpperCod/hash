@@ -1,10 +1,8 @@
-import pkg from "./package.json";
-
 export default {
     input: "./src/hash.js",
     output: [
         {
-            file: "./",
+            dir: "./",
             format: "cjs",
             sourcemap: true,
         },

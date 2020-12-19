@@ -3,7 +3,7 @@
  * @param {string|string[]} str
  * @returns {string}
  */
-export default function hash(str) {
+export function hash(str) {
     let total = [0, 0, 0];
     let length = str.length;
     while (length--) {
