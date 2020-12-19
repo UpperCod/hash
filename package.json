@@ -1,10 +1,16 @@
 {
     "name": "@uppercod/hash",
     "type": "module",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Generates a hash based on [anteesor, current, successor]",
-    "main": "./hash.js",
+    "main": "./hash.cjs",
     "module": "./src/hash.js",
+    "exports": {
+        ".": {
+            "import": "./src/hash.js",
+            "require": "./hash.cjs"
+        }
+    },
     "publishConfig": {
         "access": "public"
     },
@@ -24,8 +30,8 @@
         "url": "https://github.com/UpperCod/hash/issues"
     },
     "homepage": "https://github.com/UpperCod/hash#readme",
-    "dependencies": {},
     "devDependencies": {
+        "@betit/rollup-plugin-rename-extensions": "^0.1.0",
         "ava": "^3.10.1",
         "rollup": "^2.21.0"
     },
@@ -34,12 +40,6 @@
         "files": [
             "tests/**/*.test.js"
         ]
-    },
-    "exports": {
-        ".": {
-            "import": "./src/hash.js",
-            "require": "./src/hash.js"
-        }
     },
     "prettier": {
         "tabWidth": 4,
